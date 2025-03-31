@@ -11,7 +11,7 @@ public class SimpleRateLimiter {
 
     private final Map<String, RequestInfo> requestCounts = new ConcurrentHashMap<>();
     private final int MAX_REQUESTS = 5; // n peticiones
-    private final long TIME_WINDOW_MS = 10_000; // en n milisegundos (10 segundos)
+    private final long TIME_WINDOW_MS = 100_000; // en n milisegundos (100 segundos)
 
     public boolean isAllowed(String clientId) {
         long now = Instant.now().toEpochMilli();
