@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JwtFilterApplication {
 
 	public static void main(String[] args) {
-		testing to make my ci/cd fail
+
 		SpringApplication.run(JwtFilterApplication.class, args);
 	}
 
