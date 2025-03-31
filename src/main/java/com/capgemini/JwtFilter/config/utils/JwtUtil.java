@@ -13,9 +13,9 @@ public class JwtUtil {
     private final Key key = Keys.hmacShaKeyFor(secret.getBytes());
     private final long expiration = 3600000; // 1 hora
 
-    public String generateToken(String username) {
+    public String generateToken(String passwordToEncrypt) {
         return Jwts.builder()
-                .setSubject(username)
+                .setSubject(passwordToEncrypt)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(key)
